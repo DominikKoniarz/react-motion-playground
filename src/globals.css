@@ -8,3 +8,9 @@ body {
 body {
     @apply flex flex-col bg-slate-800 text-white;
 }
+
+@utility container {
+    margin-inline: auto;
+    padding-inline: 16px;
+    max-width: 64rem; /* 1024px */
+}
