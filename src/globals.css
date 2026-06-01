@@ -14,3 +14,7 @@ body {
     padding-inline: 24px;
     max-width: 64rem; /* 1024px */
 }
+
+@theme {
+    --color-pink: #ff0088;
+}

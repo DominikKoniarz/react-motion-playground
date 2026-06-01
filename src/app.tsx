@@ -1,3 +1,4 @@
+import Draggable from "./dragable";
 import GestureAnimatedButton from "./gesture-animated-button";
 import RotatingSquare from "./rotating-square";
 import ScrollProgressBar from "./scroll-progress-bar";
@@ -11,6 +12,8 @@ export default function App() {
                 <RotatingSquare />
 
                 <GestureAnimatedButton />
+
+                <Draggable />
             </div>
         </div>
     );

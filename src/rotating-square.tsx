@@ -66,7 +66,7 @@ export default function RotatingSquare() {
                                 ease: "easeInOut",
                             },
                         }}
-                        className="size-20 rounded-lg bg-pink-500"
+                        className="bg-pink size-20 rounded-lg"
                     />
                 )}
             </AnimatePresence>
