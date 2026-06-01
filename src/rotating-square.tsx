@@ -1,7 +1,8 @@
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence } from "motion/react";
 import { useEffect, useRef, useState } from "react";
+import { MotionDiv } from "./components/motion-primitives";
 
-const INTERVAL_DURATION = 10000;
+const INTERVAL_DURATION = 5000;
 
 export default function RotatingSquare() {
     const [mount, setMount] = useState(true);
@@ -34,7 +35,7 @@ export default function RotatingSquare() {
     }, []);
 
     return (
-        <div className="flex flex-col items-start gap-y-8">
+        <div className="flex min-h-38 flex-col items-start gap-y-8">
             <button
                 type="button"
                 onClick={onMountButtonClick}
@@ -45,7 +46,7 @@ export default function RotatingSquare() {
 
             <AnimatePresence>
                 {mount && (
-                    <motion.div
+                    <MotionDiv
                         initial={{ opacity: 0.3, rotate: 0, scale: 0.5 }}
                         exit={{
                             rotate: 0,
