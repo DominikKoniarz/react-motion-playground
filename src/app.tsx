@@ -1,3 +1,4 @@
+import CustomCursor from "./custom-cursor";
 import Draggable from "./dragable";
 import GestureAnimatedButton from "./gesture-animated-button";
 import RotatingSquare from "./rotating-square";
@@ -22,6 +23,8 @@ export default function App() {
                 <VisibleWhileInView />
 
                 <ScrollLinkedText />
+
+                <CustomCursor />
             </div>
         </div>
     );

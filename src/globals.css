@@ -18,3 +18,8 @@ body {
 @theme {
     --color-pink: #ff0088;
 }
+
+.custom-cursor-active,
+.custom-cursor-active * {
+    cursor: none !important;
+}

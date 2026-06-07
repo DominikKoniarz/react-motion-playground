@@ -3,7 +3,7 @@ import { MotionDiv } from "./components/motion-primitives";
 export default function VisibleWhileInView() {
     return (
         <MotionDiv
-            className="bg-pink mt-10 rounded-lg"
+            className="bg-pink mt-100 rounded-lg"
             initial={{
                 opacity: 0,
                 width: 100,
