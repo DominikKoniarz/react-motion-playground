@@ -13,7 +13,7 @@ export default function ScrollLinkedText() {
     const scrollingTextX = useTransform(
         scrollingTextProgress,
         [0, 1],
-        ["-50%", "100%"],
+        ["-35%", "100%"],
     );
 
     const smoothScrollingTextX = useSpring(scrollingTextX, {
@@ -25,7 +25,7 @@ export default function ScrollLinkedText() {
     return (
         <div
             ref={scrollingTextRef}
-            className="bg-pink mt-10 overflow-visible rounded-lg py-2"
+            className="bg-pink mt-55 overflow-hidden rounded-lg py-2"
         >
             <MotionDiv
                 className="px-4 whitespace-nowrap"
