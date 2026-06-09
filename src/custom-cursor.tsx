@@ -8,7 +8,7 @@ const INTERACTIVE_SELECTOR =
 const CURSOR_SIZE = 8;
 const CURSOR_Z_INDEX = 10;
 const HOVERED_INTERACTIVE_Z_INDEX = 20;
-const MAX_POINTER_OFFSET = 5;
+const MAX_POINTER_OFFSET = 2;
 
 type SavedElementStyles = {
     zIndex: string;
@@ -16,12 +16,6 @@ type SavedElementStyles = {
 };
 
 export default function CustomCursor() {
-    // const [enabled] = useState(
-    //     () =>
-    //         typeof window !== "undefined" &&
-    //         window.matchMedia("(pointer: fine)").matches,
-    // );
-
     const lastInteractiveRef = useRef<HTMLElement | null>(null);
     const savedStylesRef = useRef<SavedElementStyles | null>(null);
 
@@ -50,7 +44,6 @@ export default function CustomCursor() {
     const backgroundColor = useTransform(
         hovering,
         [0, 1],
-        // ["#f472b6", "#facc15"],
         ["#f472b6", "#f472b6f0"], // from full opacity to 50% opacity
     );
     const borderRadius = useTransform(hovering, [0, 1], [9999, 8]);
@@ -76,6 +69,7 @@ export default function CustomCursor() {
         const elevateInteractive = (element: HTMLElement) => {
             if (lastInteractiveRef.current === element) return;
 
+            // restore previous interactive element styles
             restoreInteractive();
 
             savedStylesRef.current = {
